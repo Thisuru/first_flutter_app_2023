@@ -14,24 +14,7 @@ class Dashboard extends StatelessWidget {
         ),
         backgroundColor: Colors.blue,
       ),
-      body: Center(
-        child: Text.rich(TextSpan(
-          text: 'My',
-          style: TextStyle(fontSize: 20.0),
-          children: [
-            TextSpan(
-                text: 'Flutter',
-                style:
-                TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold)),
-            TextSpan(
-                text: 'App',
-                style: TextStyle(fontSize: 30.0, color: Colors.blue)),
-            TextSpan(
-                text: '${getNumber()}',
-                style: TextStyle(fontSize: 10.0, fontWeight: FontWeight.normal))
-          ],
-        )),
-      ),
+      body: Image.asset('images/image1.jpg'),
     );
   }
 }
