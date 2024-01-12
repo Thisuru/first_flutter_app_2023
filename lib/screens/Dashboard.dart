@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -8,18 +7,28 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'Dashboard'.toUpperCase(),
-        ),
+        title: const Text('SaferU'),
         backgroundColor: Colors.blue,
       ),
-      body: Image.asset('images/image1.jpg'),
+      body: const Center(
+        child: Text.rich(TextSpan(
+            text: 'My',
+            style: TextStyle(fontSize: 20, color: Colors.green),
+            children: [
+              TextSpan(
+                  text: 'SaferU',
+                  style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue)),
+              TextSpan(
+                  text: 'App',
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black))
+            ])),
+      ),
     );
   }
-}
-
-int getNumber() {
-  Random random = new Random();
-  return random.nextInt(10);
 }
