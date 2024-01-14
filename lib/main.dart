@@ -1,21 +1,40 @@
-import 'package:first_flutter_app/screens/Dashboard.dart';
-import 'package:first_flutter_app/screens/Homepage.dart';
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
+import 'package:first_flutter_app/screens/myHomePage.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  static const customSwatch = MaterialColor(
+    0xFFFF5252,
+    <int, Color>{
+      50: Color(0xFFFFEBEE),
+      100: Color(0xFFFFCDD2),
+      200: Color(0xFFEF9A9A),
+      300: Color(0xFFE57373),
+      400: Color(0xFFEF5350),
+      500: Color(0xFFFF5252),
+      600: Color(0xFFE53935),
+      700: Color(0xFFD32F2F),
+      800: Color(0xFFC62828),
+      900: Color(0xFFB71C1C),
+    },
+  );
+
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'SaferU',
+      title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue
+        primarySwatch: customSwatch,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Dashboard(),
+      home: const MyHomePage(),
     );
   }
 }
